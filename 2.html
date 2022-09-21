@@ -1,21 +1,38 @@
 <!doctype html>
 <html>
+
 <head>
     <title>CSS kong life</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
 </head>
+<!--테그선택자 우선순위 id > class > tag-->
 
 <body>
-    <h1><a href="index.html">Kong life</a></h1>
-    <ol>
-        <li><a href="1.html"> HTML </a></li>
-        <li><a href="2.html"> CSS </a></li>
-        <li><a href="3.html"> JavaScript </a></li>
-    </ol>
+    <h1><a href="index.html" id="noline">Kong life</a></h1>
+    <div id="grid">
+        <ol>
+            <li><a href="1.html"> HTML </a></li>
+            <li><a href="2.html"> CSS </a></li>
+            <li><a href="3.html"> JavaScript </a></li>
+        </ol>
 
+        <!--
+        <h1><a href="index.html"><font color="red">Kong life</font></a></h1>
+        <ol>
+            <li><a href="1.html"> <font color="red">HTML </font></a></li>
+            <li><a href="2.html"> <font color="red">CSS </font></a></li>
+            <li><a href="3.html"> <font color="red">JavaScript </font></a></li>
+        </ol>
+        -->
 
-        <h2>happy kong like food</h2>
-
-
+        <div id="article">
+            <h2>happy kong like food</h2>
+            <p>
+                the dog like everything
+            </p>
+        </div>
+    </div>
 </body>
+
 </html>
