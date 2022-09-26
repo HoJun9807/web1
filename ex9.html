@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Function</h1>
+        <h2>Basic</h2>
+        <ul>
+            <script>
+                function two(){
+                    document.write('<li>2-1</li>');
+                    document.write('<li>2-2</li>');
+                }
+                document.write('<li>1</li>');
+                two(); 
+                document.write('<li>3</li>');
+                two();
+            </script>
+        
+        </ul>
+        <h3>Parameter & Argument</h3>
+        <script>
+            function onePlusOne(a,b){
+            document.write('<div style="color:red">'+a+b+'</div><br>');
+            }
+            onePlusOne(1,2);
+            onePlusOne(3,3);
+        </script>
+        <h4>Return</h4>
+        <script>
+            function sum2(left,right){
+                return left+right;
+            }
+            document.write('<div style="color:red">'+sum2(3,2)+'</div><br>');
+
+        </script>
+    </body>
+</html>
