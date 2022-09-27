@@ -5,36 +5,59 @@
     <title>JavaScript kong life</title>
     <meta charset="utf-8">
     <script>
-        function nightDayHandler(self){
-        var target = document.querySelector('body')
-            if(self.value === 'night'){
-            target.style.backgroundColor='black';
-            target.style.color='white'
-            self.value = 'day'; /**this값*/
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-        while(i<alist.length){
-            alist[i].style.color='gray';
-            i=i+1;
-        }
+        // function LinksSetColor(color){
+        //     var alist = document.querySelectorAll('a');
+        //     var i = 0;
+        // while(i<alist.length){
+        //     alist[i].style.color=color;
+        //     i=i+1;
+        // }
+        //}  
+        var Links = {
+            setColor: function (color) {
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while (i < alist.length) {
+                    alist[i].style.color = color;
+                    i = i + 1;
+                }
             }
-            else{
-            target.style.backgroundColor='white';
-            target.style.color='black';
-            self.value = 'night';
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-        while(i<alist.length){
-            alist[i].style.color='black';
-            i=i+1;
         }
+        var Body = {
+            setColor: function (color) {
+                document.querySelector('body').style.color = color;
+            },
+            setBackgrondColor: function (color) {
+                document.querySelector('body').style.backgroundColor = color;
+            }
+        }
+
+        function nightDayHandler(self) {
+            var target = document.querySelector('body');
+            if (self.value === 'night') {
+                Body.setBackgrondColor('black');
+                Body.setColor('white');
+                self.value = 'day'; /**this값*/
+                Links.setColor('pink');
+                /**    var alist = document.querySelectorAll('a');
+                    var i = 0;
+                while(i<alist.length){
+                    alist[i].style.color='gray';
+                    i=i+1; */
+
+            } else {
+                Body.setBackgrondColor('white');
+                Body.setColor('black');
+                self.value = 'night';
+                Links.setColor('black');
             }
         }
     </script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<!-- <body data-mode="day">
+    <!-- <body data-mode="day">
     <input type="button" value="다크모드" onclick="document.querySelector('body').style.
     backgroundColor='black';
     document.querySelector('body').
@@ -46,9 +69,7 @@
     style.color='black';
     "> -->
 
-<input id="night_day" type="button" value="night" onclick="nightDayHandler(this); ">
-<input id="night_day" type="button" value="night" onclick="nightDayHandler(this); ">
-
+    <input id="night_day" type="button" value="night" onclick="nightDayHandler(this); ">
 
     <h1><a href="index.html" id="noline">Kong life</a></h1>
 
